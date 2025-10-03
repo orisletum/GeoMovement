@@ -17,6 +17,7 @@ namespace GeoMovement
         private GameSettings            _gameSettings;
         private string                  _fileName = "level_data";
         private Vector2Int              _mapSize;
+        private float                   _scaleFactor = 1.5f;
 
         [Inject]
         public void Construct(GameSettings gameSettings, BoxView.Factory boxFactory, DataReaderService dataReader)
@@ -102,7 +103,7 @@ namespace GeoMovement
                     Box box = _dataReader.GetBoxAtPosition(posX, posY);
                     if (box != null)
                     {
-                        CreateBoxObject(box, posX, posY);
+                        CreateBoxObject(box, dx, dy);
                     }
                 }
             }
@@ -110,13 +111,13 @@ namespace GeoMovement
 
         private void CreateBoxObject(Box box, int x, int y)
         {
-            var color = _gameSettings.BoxColors.FirstOrDefault(x => x.key[0] == box.BoxColor);
+            var color = _gameSettings.BoxColors.FirstOrDefault(x => x.Key[0] == box.BoxColor);
 
             var settings = new BoxView.Settings
             {
-                Position = new Vector3(box.X, 0, box.Y),
+                Position = new Vector3(x, 0, y) * _scaleFactor,
                 Id = box.Y * 10 + box.X,
-                Color = color.value
+                Color = color.Value
 
             };
 
