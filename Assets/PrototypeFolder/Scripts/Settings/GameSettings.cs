@@ -12,13 +12,13 @@ namespace GeoMovement
     [System.Serializable]
     public class KeyedObject<T>
     {
-        public string key;
-        public T value;
+        public string Key;
+        public T Value;
 
         public KeyedObject(string key, T value)
         {
-            this.key = key;
-            this.value = value;
+            Key = key;
+            Value = value;
         }
     }
 }
