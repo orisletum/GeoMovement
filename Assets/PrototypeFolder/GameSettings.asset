@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BoxColors:
   - Key: 1
-    Value: {r: 1, g: 0, b: 0, a: 1}
+    Value: {r: 1, g: 0, b: 0, a: 0}
   - Key: 2
-    Value: {r: 1, g: 0.9606118, b: 0.12156863, a: 1}
+    Value: {r: 1, g: 0.9606118, b: 0.12156863, a: 0}
   - Key: 3
-    Value: {r: 0, g: 0.31651497, b: 1, a: 1}
+    Value: {r: 0.15566039, g: 0.3667453, b: 1, a: 0}
   - Key: 4
-    Value: {r: 0.81218004, g: 0, b: 1, a: 1}
+    Value: {r: 0.81218004, g: 0, b: 1, a: 0}

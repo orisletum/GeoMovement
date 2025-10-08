@@ -1,12 +1,19 @@
 using System;
+using UnityEngine;
 
 namespace GeoMovement
 {
+    public enum BoxState
+    {
+        Closed,
+        Opened,
+        Selected
+    }
     [Serializable]
     public class Box
     {
-        public int X;
-        public int Y;
-        public char BoxColor;
+        public BoxState     boxState;
+        public Vector2Int   MapPosition;
+        public Color        BoxColor;
     }
 }
